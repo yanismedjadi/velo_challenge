@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 
-class User extends Model
+class User extends Authenticatable
 {
+    use HasApiTokens, Notifiable;
+
     protected $fillable = ['first_name', 'last_name', 'email', 'password_hash', 'gender', 'birth_date', 'role'];
 
     public function challengesCreated()
