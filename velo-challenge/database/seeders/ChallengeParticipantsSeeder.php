@@ -35,6 +35,17 @@ class ChallengeParticipantsSeeder extends Seeder
                 'challenge_id' => 3,
                 'joined_at' => now()
             ],
+            /*
+            [
+                'user_id' => 4,
+                'challenge_id' => 1,
+                'joined_at' => now()
+            ],
+            [
+                'user_id' => 5,
+                'challenge_id' => 1,
+                'joined_at' => now()
+            ],*/    
         ]);
     }
 }
